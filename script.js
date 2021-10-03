@@ -4,9 +4,18 @@ var sec = 0;
 var count = 0;
 
 var timer = false;
-
+var prev=false;
 function start() {
-    timer = true;
+    if(prev==false)
+    {
+        timer=true;
+        prev=timer;
+    }
+    else
+    {
+        timer=false;
+        prev=timer;
+    }
     stopwatch();
 }
 
